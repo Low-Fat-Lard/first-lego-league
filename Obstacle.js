@@ -7,7 +7,6 @@ class Obstacle {
         this.width = playerWidth;
         this.height = playerHeight;
         this.col = color(255, 0, 0); 
-        this.img = loadImage("graphics/enemycar.png");         
     }
 
     collision(thing) {
@@ -30,7 +29,7 @@ class Obstacle {
             rect(this.x, this.y, this.width, this.height);
         } else {
             textSize(this.width);
-            text('🚗', this.x, this.y);
+            text('🚓', this.x, this.y);
         }
     }
 }
