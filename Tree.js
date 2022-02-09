@@ -5,7 +5,6 @@ class Tree {
         this.velX = 0;
         this.velY = 3;   
         this.col = color(0, 255, 0); 
-        this.img = loadImage("graphics/tree.png");         
     }
 
     collision(thing) {
@@ -27,7 +26,8 @@ class Tree {
             fill(this.col);
             rect(this.x, this.y, 32, 32);
         } else {
-            image(this.img, this.x, this.y);
+            textSize(50);
+            text('🌳', this.x, this.y);}
         }
     }
 }
