@@ -59,7 +59,7 @@ function keyPressed() {
 
 function setup() {
     createCanvas(1280, 720);
-
+    
     for (let i = 0; i < population; i++) {
         players[i] = new Player(generatePlayerX(), height - 64);
     }
