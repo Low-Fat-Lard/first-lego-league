@@ -12,7 +12,6 @@ class Player {
         this.alive = true;
         this.score = 0;
         this.fitness = 0;
-        this.img = loadImage("graphics/playercar.png");
         
         if (brain) {
             this.brain = brain.copy();
@@ -105,8 +104,8 @@ class Player {
                 fill(this.col);
                 rect(this.x, this.y, this.width, this.height);
             } else {
-                image(this.img, this.x, this.y, this.width, this.height);
-            }
+                textSize(32);
+                text('🚗', thus.x, this.y);}
         }
     }
 }
