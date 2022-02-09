@@ -17,8 +17,21 @@ var uiFont;
 var uiFontSize = 32;
 var simpleGraphics = false;
 var counter = 0;
+var runSpeed = 1;
+var ControlBar = function () {
+	this.speed = 1;
+	this.simpleGraphiks = function () {
+        simpleGraphics = !simpleGraphics;
+	};
+};
 
-var speedSlider;
+var con = new ControlBar();
+var gui = new dat.GUI();
+
+var initialD = gui.add(con, "speed", 1, 10).step(2);
+initialD.onChange(function (value) {
+	runSpeed = con.speed;
+});
 
 var grass1, grass2;     // two grass objects are needed for the infinite grass effect
 
@@ -68,9 +81,6 @@ function setup() {
 
     grass1 = new Grass(0, -height);
     grass2 = new Grass(0, 0);
-
-    speedSlider = createSlider(1, 10, 1);
-
     // set text characteristics
     textFont(uiFont);
     textSize(uiFontSize);    
@@ -90,7 +100,7 @@ function showUI() {
 }
 
 function draw() { 
-    for (let n = 0; n < speedSlider.value(); n++) {
+    for (let n = 0; n < runSpeed; n++) {
         if (counter % 25 == 0) {     // create new obstacles
             let randIndex = Math.floor(random(0, obstaclePositions.length));
             obstacles.push(new Obstacle(obstaclePositions[randIndex], -75));
