@@ -29,7 +29,8 @@ class Obstacle {
             fill(this.col);
             rect(this.x, this.y, this.width, this.height);
         } else {
-            image(this.img, this.x, this.y, this.width, this.height);
+            textSize(this.width);
+            text('🚗', this.x, this.y);
         }
     }
 }
