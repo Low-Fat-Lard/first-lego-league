@@ -17,5 +17,21 @@
         <script language="javascript" type="text/javascript" src="Tree.js"></script>
     </head>
     <body>
+        <script>
+        var ControlBar = function () {
+            this.speed = 1;
+            this.simpleGraphiks = function () {
+            simpleGraphics = !simpleGraphics;
+        };
+        };
+
+        var con = new ControlBar();
+        var gui = new dat.GUI();
+
+        var initialD = gui.add(con, "speed", 1, 10).step(1);
+            initialD.onChange(function (value) {
+            runSpeed = con.speed;
+        });
+        </script>
     </body>
 </html>
