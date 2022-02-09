@@ -24,20 +24,7 @@ var grass1, grass2;     // two grass objects are needed for the infinite grass e
 const filename = "bestplayer.json";
 let brainJSON = {};
 var activePlayer = null;
-var ControlBar = function () {
-	this.speed = 1;
-	this.simpleGraphiks = function () {
-        simpleGraphics = !simpleGraphics;
-	};
-};
 
-var con = new ControlBar();
-var gui = new dat.GUI();
-
-var initialD = gui.add(con, "speed", 1, 10).step(2);
-initialD.onChange(function (value) {
-	runSpeed = con.speed;
-});
 function preload() {
     uiFont = "monospace";
     brainJSON = loadJSON(filename);
