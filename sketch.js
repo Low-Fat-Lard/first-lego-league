@@ -58,8 +58,7 @@ function keyPressed() {
 }
 
 function setup() {
-    let canvas = createCanvas(1280, 720);
-    canvas.id("cnvs")
+    createCanvas(window.innerWidth/2, window.innerHeight/2);
     for (let i = 0; i < population; i++) {
         players[i] = new Player(generatePlayerX(), height - 64);
     }
