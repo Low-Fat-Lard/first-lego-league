@@ -18,6 +18,12 @@ var uiFontSize = 32;
 var simpleGraphics = false;
 var counter = 0;
 var runSpeed = 1;
+var grass1, grass2;     // two grass objects are needed for the infinite grass effect
+
+// for loading existing player
+const filename = "bestplayer.json";
+let brainJSON = {};
+var activePlayer = null;
 var ControlBar = function () {
 	this.speed = 1;
 	this.simpleGraphiks = function () {
@@ -32,14 +38,6 @@ var initialD = gui.add(con, "speed", 1, 10).step(2);
 initialD.onChange(function (value) {
 	runSpeed = con.speed;
 });
-
-var grass1, grass2;     // two grass objects are needed for the infinite grass effect
-
-// for loading existing player
-const filename = "bestplayer.json";
-let brainJSON = {};
-var activePlayer = null;
-
 function preload() {
     uiFont = "monospace";
     brainJSON = loadJSON(filename);
