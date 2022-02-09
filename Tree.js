@@ -27,7 +27,7 @@ class Tree {
             rect(this.x, this.y, 32, 32);
         } else {
             textSize(50);
-            text('🌳', this.x, this.y);}
+            text('🌳', this.x, this.y);
         }
     }
 }
