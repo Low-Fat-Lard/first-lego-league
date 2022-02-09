@@ -105,7 +105,7 @@ class Player {
                 rect(this.x, this.y, this.width, this.height);
             } else {
                 textSize(32);
-                text('🚗', thus.x, this.y);}
+                text('🚗', this.x, this.y);}
         }
     }
 }
