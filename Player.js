@@ -104,7 +104,7 @@ class Player {
                 fill(this.col);
                 rect(this.x, this.y, this.width, this.height);
             } else {
-                textSize(32);
+                textSize(31);
                 text('🚗', this.x, this.y);}
         }
     }
