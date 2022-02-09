@@ -9,6 +9,7 @@ body {
 }
 
 canvas {
+	z-index: -100;
 	position: absolute;
 	display: block;
 	height: 50%;
