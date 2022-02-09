@@ -8,7 +8,7 @@ body {
 	background: #f2f9fe;
 }
 
-#cnvs {
+canvas {
 	position: absolute;
 	display: block;
 	height: 50%;
