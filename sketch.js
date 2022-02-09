@@ -15,7 +15,7 @@ var bestScore = 0;
 
 var uiFont;
 var uiFontSize = 32;
-var simpleGraphics = false;
+var simpleGraphics = true;
 var counter = 0;
 
 var speedSlider;
