@@ -1,6 +1,5 @@
 const playerWidth = 32;
 const playerHeight = 32;
-const population = 250;
 
 var players = [];
 var obstaclePositions = [544, 576, 608, 640, 672, 704, 736];
@@ -13,7 +12,10 @@ const maxNumberOfTrees = 25;
 var alivePlayers = 0;
 var bestScore = 0;
 var inteligence = true;
+var population = 250;
 var uiFont;
+var leftPressed = false;
+var rightPressed = false;
 var uiFontSize = 32;
 var simpleGraphics = false;
 var counter = 0;
