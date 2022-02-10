@@ -54,13 +54,27 @@ function keyPressed() {
         saveBest();
     } else if (key == 'L') {        
         loadBest(generatePlayerX(), height - 64);
-    } else if (key == "ArrowRight" && inteligence == false || key == "D" && inteligence == false) {
-        console.log("right")
-    } else if (key == "ArrowLeft" && inteligence == false || key == "A" && inteligence == false) {
-        console.log("left")
     }
 }
+document.addEventListener('keydown', logKey);
+document.addEventListener('keyup', logKey_up);
 
+function logKey(e) {
+    if(e.code == "ArrowLeft" && inteligence == false){
+        leftPressed = true;
+    }
+    if(e.code == "ArrowRight" && inteligence == false){
+        rightPressed = true
+    }
+}
+function logKey_up(e) {
+    if(e.code == "ArrowLeft"){
+        leftPressed = false;
+    }
+    if(e.code == "ArrowRight"){
+        rightPressed = false
+    }
+}
 function setup() {
     createCanvas(1280, 720);
     for (let i = 0; i < population; i++) {
@@ -82,6 +96,7 @@ function showUI() {
         text("generation: " + generation, 10, 28);
         text("best score: " + bestScore, 10, 64);
         text("remaining: " + alivePlayers + "/" + population, 10, 100);
+        text("AI: " + inteligence, 10, 136);
     } else {
         text("score: " + activePlayer.score, 10, 28);
     }
@@ -96,7 +111,22 @@ function draw() {
             trees.push(new Tree(800, -150));
         }
         counter++;
-
+        if(rightPressed == true){
+            for (let i = 0; i < players.length; i++) {
+                players[i].goRight();
+            }
+        }
+        if(inteligence == false){
+            
+            population = 1;
+        } else{
+            population = con.population
+        }
+        if(leftPressed == true){
+            for (let i = 0; i < players.length; i++) {
+                players[i].goLeft();
+            }
+        }
         if (obstacles.length > maxNumberOfObstacles)
             obstacles.splice(0, 1);
 
