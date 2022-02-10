@@ -20,21 +20,26 @@
         <script>
         var ControlBar = function () {
             this.speed = 1;
+            this.population = 250;
             this.simpleGraphics = function () {
-            simpleGraphics = !simpleGraphics;
+                simpleGraphics = !simpleGraphics;
             };
             this.manual = function () {
-            inteligence = !inteligence;
-            console.log(inteligence)
+                inteligence = !inteligence;
             };
         };
 
         var con = new ControlBar();
         var gui = new dat.GUI();
 
-        var initialD = gui.add(con, "speed", 1, 10).step(1);
-            initialD.onChange(function (value) {
+        var speedSlider = gui.add(con, "speed", 1, 10).step(1);
+            speedSlider.onChange(function (value) {
             runSpeed = con.speed;
+        });
+        var populationSlider = gui.add(con, "population", 1, 250).step(1);
+            populationSlider.onChange(function (value) {
+                population = con.population;
+                setup()
         });
         gui.add(con, "simpleGraphics");
         gui.add(con, "manual");
