@@ -54,9 +54,9 @@ function keyPressed() {
         saveBest();
     } else if (key == 'L') {        
         loadBest(generatePlayerX(), height - 64);
-    } else if (key == "ArrowRight" && inteligence == false) {
+    } else if (key == "ArrowRight" && inteligence == false || key == "D" && inteligence == false) {
         console.log("right")
-    } else if (key == "ArrowLeft" && inteligence == false) {
+    } else if (key == "ArrowLeft" && inteligence == false || key == "A" && inteligence == false) {
         console.log("left")
     }
 }
