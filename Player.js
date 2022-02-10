@@ -69,9 +69,9 @@ class Player {
                 highestIndex = i;
         }            
 
-        if (highestIndex == 0)
+        if (highestIndex == 0 && inteligence == true)
             this.goLeft();
-        else if (highestIndex == 1)
+        else if (highestIndex == 1 && inteligence == true)
             this.goRight();
     }
     
