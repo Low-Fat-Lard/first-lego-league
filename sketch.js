@@ -12,7 +12,7 @@ const maxNumberOfTrees = 25;
 
 var alivePlayers = 0;
 var bestScore = 0;
-
+var inteligence = true;
 var uiFont;
 var uiFontSize = 32;
 var simpleGraphics = false;
@@ -54,13 +54,17 @@ function keyPressed() {
         saveBest();
     } else if (key == 'L') {        
         loadBest(generatePlayerX(), height - 64);
+    } else if (key == 'ArrowRight') {
+        console.log("right")
+    } else if (key == 'ArrowLeft') {
+        console.log("left")
     }
 }
 
 function setup() {
     createCanvas(1280, 720);
     for (let i = 0; i < population; i++) {
-        players[i] = new Player(generatePlayerX(), height - 64);
+       players[i] = new Player(generatePlayerX(), height - 64);
     }
 
     grass1 = new Grass(0, -height);
