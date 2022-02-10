@@ -56,10 +56,8 @@ function keyPressed() {
         loadBest(generatePlayerX(), height - 64);
     } else if (key == "ArrowRight") {
         console.log("right")
-        activePlayer.goRight()
     } else if (key == "ArrowLeft") {
         console.log("left")
-        activePlayer.goLeft()
     }
 }
 
