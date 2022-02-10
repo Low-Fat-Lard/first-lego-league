@@ -55,8 +55,10 @@ function keyPressed() {
     } else if (key == 'L') {        
         loadBest(generatePlayerX(), height - 64);
     } else if (key == 'ArrowRight' && inteligence == false) {
+        console.log("right")
         Player.goRight()
     } else if (key == 'ArrowLeft' && inteligence == false) {
+        console.log("left")
         Player.goLeft()
     }
 }
