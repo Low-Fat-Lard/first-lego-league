@@ -20,9 +20,12 @@
         <script>
         var ControlBar = function () {
             this.speed = 1;
-            this.simpleGraphiks = function () {
+            this.simpleGraphics = function () {
             simpleGraphics = !simpleGraphics;
-        };
+            };
+            this.manual = function () {
+            inteligence = !inteligence;
+            };
         };
 
         var con = new ControlBar();
@@ -32,7 +35,8 @@
             initialD.onChange(function (value) {
             runSpeed = con.speed;
         });
-        gui.add(con, "simpleGraphiks");
+        gui.add(con, "simpleGraphics");
+        gui.add(con, "manual");
         </script>
     </body>
 </html>
