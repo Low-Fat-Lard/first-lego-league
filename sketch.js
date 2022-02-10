@@ -54,10 +54,10 @@ function keyPressed() {
         saveBest();
     } else if (key == 'L') {        
         loadBest(generatePlayerX(), height - 64);
-    } else if (keyCode === RIGHT_ARROW) {
+    } else if (key == 'RIGHT_ARROW') {
         console.log("right")
         Player.goRight()
-    } else if (keyCode === LEFT_ARROW) {
+    } else if (key == 'LEFT_ARROW') {
         Player.goLeft()
         console.log("left")
     }
