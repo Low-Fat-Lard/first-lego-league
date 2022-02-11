@@ -19,7 +19,9 @@ The [High school Dublin application](https://www.highschooldublin.com/) to the [
 - Press L to load saved Machine learning📥
 - Press S to save💾
 - When in Manual Mode, use arrow keys to move
-
+### Images
+In game example
+![In game example](/graphics/in_game.png)
 ### Contributers
  - [Low Fat Lard](https://github.com/Low-Fat-Lard)
  - [Edgy9](https://github.com/edgy9)
