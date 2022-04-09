@@ -35,6 +35,14 @@ function nextGeneration() {
         players[i] = pickOne();
     } 
 }
+function nextmanualGeneration() {    
+    tempPlayers = [];
+    tempPlayers.push(players[1]);
+    for (let player of tempPlayers) {
+        player.fitness = player.score;        
+    }
+    players[1] = pickOne();
+}
 
 function pickOne() {
     var index = 0;
@@ -51,7 +59,11 @@ function pickOne() {
     child.mutate(0.1);
     return child;
 }
-
+function regen(){
+    for (let i = 0; i < population; i++) {
+            players[i].alive = false;
+     }
+}
 function calculateFitness() {
     let sum = 0;
     for (let player of tempPlayers) {
