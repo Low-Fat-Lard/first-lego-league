@@ -23,10 +23,13 @@ var runSpeed = 1;
 var grass1, grass2;     // two grass objects are needed for the infinite grass effect
 var leftPressed = false;
 var rightPressed = false;
+const filename = "bestplayer.json";
+let brainJSON = {};
 var activePlayer = null;
 
 function preload() {
     uiFont = "monospace";
+    brainJSON = loadJSON(filename);
 }
 
 function generatePlayerX() {
