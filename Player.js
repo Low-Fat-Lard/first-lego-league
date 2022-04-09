@@ -108,7 +108,7 @@ class Player {
                             //count lives
                             if(this.tick == 1 && this.attackable == true){
                                 this.lives-=1;
-                                this.x = generatePlayerX();
+                                console.log("HIT")
                                 this.attackable = false
                             }
                             //the rickroll
