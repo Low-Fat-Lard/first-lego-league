@@ -11,7 +11,7 @@ class Grass {
 
     update() {
         this.x += this.velX;
-        this.y += this.velY;
+        this.y += this.velY*runSpeed;
     }
 
     show() {
