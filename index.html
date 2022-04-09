@@ -18,7 +18,7 @@
     </head>
     <body>
         <script>
-        var ControlBar = function () {
+               var ControlBar = function () {
             this.speed = 1;
             this.population = 250;
             this.simpleGraphics = function () {
@@ -26,6 +26,7 @@
             };
             this.manual = function () {
                 inteligence = !inteligence;
+                regen();
             };
         };
 
@@ -38,8 +39,8 @@
         });
         var populationSlider = gui.add(con, "population", 1, 250).step(1);
             populationSlider.onChange(function (value) {
+                regen();
                 population = con.population;
-                setup()
         });
         gui.add(con, "simpleGraphics");
         gui.add(con, "manual");
