@@ -17,7 +17,7 @@ class Tree {
 
     update() {
         this.x += this.velX;
-        this.y += this.velY;
+        this.y += runSpeed*this.velY;
     }
 
     show() {   
