@@ -12,7 +12,9 @@ class Player {
         this.alive = true;
         this.score = 0;
         this.fitness = 0;
-        
+        this.lives = 3;
+        this.tick = 0;
+        this.attackable = true;
         if (brain) {
             this.brain = brain.copy();
         } else {
@@ -84,18 +86,46 @@ class Player {
             this.score++;
             this.x += this.velX;
             this.y += this.velY;
+            debugLives = this.lives
+            if(this.tick > 0){
+                this.tick -= 0.5;
+            }
+            if(this.tick == 0.5){
+                this.attackable = true
+            }
+            drawHearts();
 
             // collision detection with obstacles
             for (let i = 0; i < obstacles.length; i++) {
                 if (obstacles[i].collision(this)) {
-                    if (!activePlayer)
+                    //this is dumb, but idk how to make it better
+                    if (!activePlayer && inteligence){
                         this.alive = false;
+                    }
+                    else{
+
+                            this.tick += 1;
+                            //count lives
+                            if(this.tick == 1 && this.attackable == true){
+                                this.lives-=1;
+                                this.x = generatePlayerX();
+                                this.attackable = false
+                            }
+                            //the rickroll
+                            if(this.lives < 1){
+                                window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley");
+                                window.location.reload()
+                                alert("you died! score:"+bestScore)
+                            }
+                    }
+                        
                 }
             }
 
             this.think();
         }
     }
+    //just for testing purposes.
 
     show() {
         if (this.alive) {    
@@ -105,7 +135,7 @@ class Player {
                 rect(this.x, this.y, this.width, this.height);
             } else {
                 textSize(31);
-                text('🚗', this.x, this.y);}
+                text('🚗', this.x-3, this.y);}
         }
     }
 }
