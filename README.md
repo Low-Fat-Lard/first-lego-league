@@ -1,6 +1,6 @@
 # first-lego-league
 
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Low-Fat-Lard/first-lego-league)
+[![💻Open in Visual Studio Code]](https://open.vscode.dev/Low-Fat-Lard/first-lego-league)
 
 ## This is a list of python scripts for beginner projects.
 
