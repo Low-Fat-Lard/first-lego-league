@@ -51,7 +51,11 @@ function loadBest(x, y) {   // loads the best player from file
 }
 
 function keyPressed() {
-    
+    if (key == 'S') {
+        saveBest();
+    } else if (key == 'L') {        
+        loadBest(generatePlayerX(), height - 64);
+    }
 }
 document.addEventListener('keydown', logKey);
 document.addEventListener('keyup', logKey_up);
