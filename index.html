@@ -4,14 +4,19 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <title>Obstacles</title>
+        <!--Libraries-->
         <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
         <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
         <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+        <!--Javascript-->
         <script language="javascript" type="text/javascript" src="lib/nn.js"></script>
         <script language="javascript" type="text/javascript" src="lib/matrix.js"></script>
         <script language="javascript" type="text/javascript" src="sketch.js"></script>
+        <script language="javascript" type="text/javascript" src="gameObjects.js"></script>
+        <script language="javascript" type="text/javascript" src="Genetic.js"></script>
     </head>
     <body>
+        <!--Useless crappy JS for accessibility-->
         <script>
                var ControlBar = function () {
             this.speed = 1;
@@ -39,6 +44,7 @@
         });
         gui.add(con, "simpleGraphics");
         gui.add(con, "manual");
+           <!--疲れた。もうやりたくない-->
         </script>
     </body>
 </html>
