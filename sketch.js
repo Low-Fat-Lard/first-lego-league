@@ -96,7 +96,6 @@ function showUI() {
     } else if(!activePlayer && inteligence == false){
         text("lives: " + displayLives.join(""), 10, 38);
         text("score: " + bestScore, 10, 74);
-        text("tick: " + debugLives, 10, 110);
     } else {
         text("score: " + activePlayer.score, 10, 38);
     }
