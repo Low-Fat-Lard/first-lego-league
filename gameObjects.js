@@ -8,7 +8,7 @@ class Player {
         this.velY = 0;   
         this.width = playerWidth;
         this.height = playerHeight;
-        this.col = color(255);
+        this.col = color(191,33,47);
         this.alive = true;
         this.score = 0;
         this.fitness = 0;
@@ -130,7 +130,6 @@ class Player {
     show() {
         if (this.alive) {    
             if (simpleGraphics) {        
-                stroke(0);
                 fill(this.col);
                 rect(this.x, this.y, this.width, this.height);
             } else {
@@ -147,7 +146,7 @@ class Obstacle {
         this.velY = 5;   
         this.width = playerWidth;
         this.height = playerHeight;
-        this.col = color(255, 0, 0); 
+        this.col = color(38,75,150); 
     }
 
     collision(thing) {
@@ -165,7 +164,6 @@ class Obstacle {
 
     show() {   
         if (simpleGraphics) {     
-            stroke(0);
             fill(this.col);
             rect(this.x, this.y, this.width, this.height);
         } else {
@@ -180,7 +178,7 @@ class Tree {
         this.y = y;
         this.velX = 0;
         this.velY = 3;   
-        this.col = color(0, 255, 0); 
+        this.col = color(39,179,118); 
     }
 
     collision(thing) {
@@ -198,7 +196,6 @@ class Tree {
 
     show() {   
         if (simpleGraphics) {     
-            stroke(0);
             fill(this.col);
             rect(this.x, this.y, 32, 32);
         } else {
