@@ -171,7 +171,6 @@ function draw() {
 
     // all the drawing
     background(0,111,60);
-    stroke(0);
     fill(200);
     rect(obstaclePositions[0], 0, obstaclePositions[obstaclePositions.length - 1] - obstaclePositions[0] + playerWidth, height);
     
