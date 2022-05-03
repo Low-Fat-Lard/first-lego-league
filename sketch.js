@@ -20,7 +20,6 @@ var uiFontSize = 32;
 var simpleGraphics = false;
 var counter = 0;
 var runSpeed = 1;
-var grass1, grass2;     // two grass objects are needed for the infinite grass effect
 var leftPressed = false;
 var rightPressed = false;
 const filename = "bestplayer.json";
@@ -81,9 +80,6 @@ function setup() {
     for (let i = 0; i < population; i++) {
        players[i] = new Player(generatePlayerX(), height - 64);
     }
-
-    grass1 = new Grass(0, -height);
-    grass2 = new Grass(0, 0);
     // set text characteristics
     textFont(uiFont);
     textSize(uiFontSize);    
@@ -175,19 +171,7 @@ function draw() {
     }
 
     // all the drawing
-    background(51, 204, 51);
-    if (!simpleGraphics) {
-        grass1.update();
-        grass1.show();
-        grass2.update();
-        grass2.show();
-        if (grass1.y == 0) {
-            grass2.y = -height;
-        } else if (grass2.y == 0) {
-            grass1.y = -height;
-        }
-    }
-
+    background(0,111,60);
     stroke(0);
     fill(200);
     rect(obstaclePositions[0], 0, obstaclePositions[obstaclePositions.length - 1] - obstaclePositions[0] + playerWidth, height);
