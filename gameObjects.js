@@ -31,7 +31,9 @@ class Player {
         if (this.x < this.maxX)
             this.x += 3 * runSpeed/2;
     }
-
+    moveWithMouse(e) {
+        this.x = e;
+    }
     getClosestObstacle() {
         let closestIndex = 0;
         for (let i = 0; i < obstacles.length; i++) {
