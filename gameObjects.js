@@ -24,12 +24,12 @@ class Player {
     
     goLeft() {
         if (this.x > this.minX)
-            this.x -= 8;
+            this.x -= 3 * runSpeed/2;
     }
 
     goRight() {
         if (this.x < this.maxX)
-            this.x += 8;
+            this.x += 3 * runSpeed/2;
     }
 
     getClosestObstacle() {
