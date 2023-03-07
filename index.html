@@ -28,6 +28,9 @@
                 inteligence = !inteligence;
                 regen();
             };
+            this.mouse = function () {
+                mouse = !mouse;
+            }
         };
 
         var con = new ControlBar();
@@ -44,7 +47,8 @@
         });
         gui.add(con, "simpleGraphics");
         gui.add(con, "manual");
-           <!--疲れた。もうやりたくない-->
+        gui.add(con, "mouse");
         </script>
+        <!--疲れた。もうやりたくない-->
     </body>
 </html>
